@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('authenticate', 'Auth\AuthenticateController@authenticate');
 
-Route::middleware('jwt.auth')->get('users', 'UsersAPIController@index');
+Route::middleware('jwt.auth')->get('users', 'API\UsersAPIController@index');
+Route::middleware('jwt.auth')->get('clients', 'API\ClientsAPIController@index');
+
+Route::get('dialogs/{id}', 'API\DialogsAPIController@show');
+Route::post('dialogs', 'API\DialogsAPIController@store');

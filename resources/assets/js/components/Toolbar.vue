@@ -22,6 +22,11 @@
         },
         components: {
             MenuMoreVert
+        },
+        computed: {
+            actions() {
+                return this.$store.state.toolbar.actions
+            }
         }
     }
 </script>

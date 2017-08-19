@@ -24,5 +24,10 @@ new Vue({
                 .then((response) => this.$store.dispatch('changeUser', response.data))
         }
     },
+    sockets: {
+      'client-connected': function(data) {
+          console.log(data)
+      }
+    },
     render: h => h(App)
 }).$mount('#app')

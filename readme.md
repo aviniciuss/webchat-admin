@@ -21,3 +21,7 @@ $ yarn install
 $ php artisam migrate
 $ php artisan serve
 ```
+
+#### Login
+- User: admin@localhost.com
+- Password: secret
