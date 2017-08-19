@@ -79,7 +79,7 @@
             getAgents() {
                 this.$http.get('/users')
                     .then((response) => {
-                        this.$store.dispatch('pushAgents', _.filter(response.data.agents, agent => agent.email !== this.user.email))
+                        this.$store.dispatch('pushAgents', _.filter(response.data.data, agent => agent.email !== this.user.email))
                         this.await = false
 
                         setTimeout(() => {

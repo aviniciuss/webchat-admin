@@ -10,9 +10,11 @@ class AgentTransformer extends TransformerAbstract
     public function transform(User $agent)
     {
         return [
-            'id'    => (int) $agent->id,
-            'name'  => $agent->name,
-            'email' => $agent->email
+            'id'     => (int) $agent->id,
+            'name'   => $agent->name,
+            'email'  => $agent->email,
+            'avatar' => $agent->avatar,
+            'online' => $agent->online
         ];
     }
 }
