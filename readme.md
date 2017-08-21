@@ -13,12 +13,27 @@ e outras funcionalidades futuras como:
    - Customização do web app.
 
 ### Utilizando
+* Atenção o Redis deve estar rodando na porta padrão. 
+
+Clonar e configurar váriaveis de ambiente do banco de dados.
 
 ```
 $ git clone https://github.com/avinisilva/webchat-admin.git
+$ cp .env.example .env
+$ php artisan key:generate
+```
+
+Instalar dependências e fazer a migração do banco de dados
+
+```
 $ composer install
 $ yarn install
 $ php artisam migrate
+$ php artisan db:seed
+```
+
+Subir o servidor
+```
 $ php artisan serve
 ```
 
